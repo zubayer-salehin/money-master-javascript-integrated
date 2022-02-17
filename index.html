@@ -14,120 +14,139 @@
 </head>
 
 <body>
-
+    <!-- header start -->
     <header>
         <h1 class="text-cyan py-4 text-center title">Money Saving and Expenses 💰</h1>
     </header>
+    <!-- header end -->
 
-    <section class="mb-5">
-        <div class="custom-container">
-            <div class="row wrapper">
-                <div class="col-md-7 col-12 p-left-5 padding-remove">
-                    <img class="img-fluid height" src="image/georgi-srebrev-wgA3JhcXSuY-unsplash.jpg" alt="">
-                </div>
-                <div class="col-md-5 col-10 bg-netural">
-                    <h5 class="text-center mt-5">Income</h5>
-                    <div class="row d-flex align-items-center mt-4 g-0">
-                        <div class="col-md-5 col-3 text-end pe-3">
-                            <label class="" for="income">Income:</label>
-                        </div>
-                        <div class="col-md-7 col-9">
-                            <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
-                                id="income" placeholder="My Income">
-                        </div>
+    <!-- main start -->
+    <main>
+        <!-- first-Section start -->
+        <section id="#first-Section" class="mb-5">
+            <div class="custom-container">
+                <div class="row wrapper">
+                    <!-- Picture div -->
+                    <div class="col-md-7 col-12 p-left-5 padding-remove">
+                        <img class="img-fluid height" src="image/georgi-srebrev-wgA3JhcXSuY-unsplash.jpg" alt="">
                     </div>
-                    <h5 class="text-center mt-4" class="2xl">Expenses</h5>
-                    <div class="row d-flex align-items-center mt-4 g-0">
-                        <div class="col-md-5 col-3 text-end  pe-3">
-                            <label class="" for="food">Food:</label>
+                    <!-- Calculation div -->
+                    <div class="col-md-5 col-10 bg-netural">
+                        <h5 class="text-center mt-5">Income</h5>
+                        <!-- Income input field -->
+                        <div class="row d-flex align-items-center mt-4 g-0">
+                            <div class="col-md-5 col-3 text-end pe-3">
+                                <label class="" for="income">Income:</label>
+                            </div>
+                            <div class="col-md-7 col-9">
+                                <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
+                                    id="income" placeholder="My Income">
+                            </div>
                         </div>
-                        <div class="col-md-7 col-9">
-                            <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
-                                id="foodInput" placeholder="Food Expenses">
+                        <h5 class="text-center mt-4" class="2xl">Expenses</h5>
+                        <!-- Food input field -->
+                        <div class="row d-flex align-items-center mt-4 g-0">
+                            <div class="col-md-5 col-3 text-end  pe-3">
+                                <label class="" for="food">Food:</label>
+                            </div>
+                            <div class="col-md-7 col-9">
+                                <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
+                                    id="foodInput" placeholder="Food Expenses">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row d-flex align-items-center mt-3 g-0">
-                        <div class="col-md-5 col-3 text-end  pe-3">
-                            <label class="" for="rent">Rent:</label>
+                        <!-- Rend input filed -->
+                        <div class="row d-flex align-items-center mt-3 g-0">
+                            <div class="col-md-5 col-3 text-end  pe-3">
+                                <label class="" for="rent">Rent:</label>
+                            </div>
+                            <div class="col-md-7 col-9">
+                                <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
+                                    id="rentInput" placeholder="Rent Expenses">
+                            </div>
                         </div>
-                        <div class="col-md-7 col-9">
-                            <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
-                                id="rentInput" placeholder="Rent Expenses">
+                        <!-- Clothes input field -->
+                        <div class="row d-flex align-items-center mt-3 g-0">
+                            <div class="col-md-5 col-3 text-end  pe-3">
+                                <label class="" for="clothes">Clothes:</label>
+                            </div>
+                            <div class="col-md-7 col-9">
+                                <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
+                                    id="clothesInput" placeholder="Clothes Expenses">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row d-flex align-items-center mt-3 g-0">
-                        <div class="col-md-5 col-3 text-end  pe-3">
-                            <label class="" for="clothes">Clothes:</label>
+                        <!-- Error Message -->
+                        <div class="d-flex flex-column align-items-center">
+                            <div id="numberMessage" class="stringStyle none">
+                                ❌ error:
+                                Please
+                                Enter
+                                a
+                                Number
+                            </div>
+                            <div id="positiveNumberMessage" class="positiveStyle none">
+                                ❌ error:
+                                Please
+                                Enter
+                                a
+                                Positive Number
+                            </div>
                         </div>
-                        <div class="col-md-7 col-9">
-                            <input class="py-2 pe-3 bg-gray ps-3 border border-none rounded" type="text" name=""
-                                id="clothesInput" placeholder="Clothes Expenses">
+                        <!-- Calculate Button -->
+                        <p class="mt-4 text-center">
+                            <button class="btn btn-primary px-5 py-2 font-semibold text-white text-lg rounded-sm"
+                                type="button" id="calculate">Calculate</button>
+                        </p>
+                        <h5 class="text-center mt-4">Total Expenses: <span id="total-expenses">00</span>
+                        </h5>
+                        <div class="d-flex justify-content-center">
+                            <div id="totalExpensesMessage" class="positiveStyle none mt-2">❌ error:
+                                Total
+                                Expenses is Greater Than Income
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                        <div id="numberMessage" class="stringStyle none">
-                            ❌ error:
-                            Please
-                            Enter
-                            a
-                            Number
+                        <h5 class="text-center mt-2">Balance: <span id="balance">00</span></h5>
+                        <!-- Save input -->
+                        <p class="mt-4 text-center">
+                            <label class="text-lg pe-2" for="save">Save: </label>
+                            <input class="save py-2 bg-gray text-center border border-none rounded" type="text" name=""
+                                id="saveInput" placeholder="Percentage">
+                            <span class="me-3 ms-2">%</span>
+                            <!-- Save Button  -->
+                            <button class="btn btn-primary px-4 py-2 font-semibold text-white text-lg rounded-sm"
+                                type="button" id="save">Save</button>
+                        </p>
+                        <!-- Error Message -->
+                        <div class="d-flex flex-column align-items-center">
+                            <div id="percentageNumberMessage" class="stringStyle none mt-2">❌ error:
+                                Please
+                                Enter
+                                a
+                                Number
+                            </div>
+                            <div id="percentagePositiveNumberMessage" class="positiveStyle none mt-2">
+                                ❌ error: Please
+                                Enter
+                                a
+                                Positive Number
+                            </div>
                         </div>
-                        <div id="positiveNumberMessage" class="positiveStyle none">
-                            ❌ error:
-                            Please
-                            Enter
-                            a
-                            Positive Number
-                        </div>
-                    </div>
-                    <p class="mt-4 text-center">
-                        <button class="btn btn-primary px-5 py-2 font-semibold text-white text-lg rounded-sm"
-                            type="button" id="calculate">Calculate</button>
-                    </p>
-                    <h5 class="text-center mt-4">Total Expenses: <span id="total-expenses">00</span>
-                    </h5>
-                    <div class="d-flex justify-content-center">
-                        <div id="totalExpensesMessage" class="positiveStyle none mt-2">❌ error:
-                            Total
-                            Expenses is Greater Than Income
-                        </div>
-                    </div>
-                    <h5 class="text-center mt-2">Balance: <span id="balance">00</span></h5>
-                    <p class="mt-4 text-center">
-                        <label class="text-lg pe-2" for="save">Save: </label>
-                        <input class="save py-2 bg-gray text-center border border-none rounded" type="text" name=""
-                            id="saveInput" placeholder="Percentage">
-                        <span class="me-3 ms-2">%</span><button
-                            class="btn btn-primary px-4 py-2 font-semibold text-white text-lg rounded-sm" type="button"
-                            id="save">Save</button>
-                    </p>
-                    <div class="d-flex flex-column align-items-center">
-                        <div id="percentageNumberMessage" class="stringStyle none mt-2">❌ error:
-                            Please
-                            Enter
-                            a
-                            Number
-                        </div>
-                        <div id="percentagePositiveNumberMessage" class="positiveStyle none mt-2">
-                            ❌ error: Please
-                            Enter
-                            a
-                            Positive Number
-                        </div>
-                    </div>
-                    <h5 class="text-center mt-2">Saving Amount: <span id="saving-amount">00</span>
-                    </h5>
-                    <h5 class="text-center mt-3">Remaining Balance: <span id="remaining-balance">00</span></h5>
-                    <div class="d-flex justify-content-center">
-                        <div id="remianingMessage" class="positiveStyle none mt-2">
-                            ❌ error: Saving
-                            Amount is Greater Than Balance
+                        <h5 class="text-center mt-2">Saving Amount: <span id="saving-amount">00</span>
+                        </h5>
+                        <h5 class="text-center mt-3">Remaining Balance: <span id="remaining-balance">00</span></h5>
+                        <!-- Error Message -->
+                        <div class="d-flex justify-content-center">
+                            <div id="remianingMessage" class="positiveStyle none mt-2">
+                                ❌ error: Saving
+                                Amount is Greater Than Balance
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- first-Section end -->
+    </main>
+    <!-- main end -->
 
     <!-- Bootstrap JS File -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
