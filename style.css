@@ -1,4 +1,4 @@
-/* CSS Start */
+/*Degin CSS Start */
 .custom-container{
     width:1240px;
     margin:0 auto;
@@ -43,9 +43,9 @@
 .none{
     display: none;
 }
-/* CSS End */
+/*Degin CSS End */
 
-
+/* Media Query Start */
 @media (max-width: 576px) {
     .custom-container{
         width:95%;
@@ -69,3 +69,4 @@
       align-items: center;
   }
 }
+/* Media Query End */
