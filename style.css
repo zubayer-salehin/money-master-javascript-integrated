@@ -17,6 +17,9 @@
 .bg-gray{
     background-color: #DCDCDC;
 }
+.expenses{
+   font-weight: 500;
+}
 .width{
    width:120px;
 }
